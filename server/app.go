@@ -184,7 +184,8 @@ func (app *App) PushNode() {
 		log.Println("Error decoding response:", err)
 		return
 	}
-	app.userUsedTrafficKb.Clear()
+	//app.userUsedTrafficKb.Clear()
+	//above will remove the standalone instance's UUID
 	for k, userAvailableKB := range users {
 		slog.Debug("user available traffic", "uid", k, "available", userAvailableKB)
 		app.userUsedTrafficKb.Store(k, int64(0)) //set allowed userID

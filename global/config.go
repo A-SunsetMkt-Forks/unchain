@@ -16,7 +16,7 @@ import (
 type Config struct {
 	SubAddresses      string `desc:"sub addresses" def:"112.115.112.2:80,node2.xxx.cn:443"`                                            //这个信息会帮助你生成V2ray/Clash/ShadowRocket的订阅链接,同时这个是互联网浏览器访问的地址
 	Port              string `desc:"port" def:"80"`                                                                                    //golang app 服务端口,可选,建议默认80或者443
-	RegisterUrl       string `desc:"register url" def:"https://unchainapi.bob99.workers.dev/api/nodes"`                                //optional,流量,用户鉴权的主控服务器地址
+	RegisterUrl       string `desc:"register url" def:"https://unchainapi.bob99.workers.dev/api/node"`                                 //optional,流量,用户鉴权的主控服务器地址
 	RegisterToken     string `desc:"register token" def:"unchain people from censorship and surveillance"`                             //optional,流量,用户鉴权的主控服务器token
 	AllowUsers        string `desc:"allow users UUID" def:"903bcd04-79e7-429c-bf0c-0456c7de9cdc,903bcd04-79e7-429c-bf0c-0456c7de9cd1"` //单机模式下,允许的用户UUID
 	LogFile           string `desc:"log file path" def:""`                                                                             //日志文件路径
